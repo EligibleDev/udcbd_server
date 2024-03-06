@@ -18,8 +18,11 @@ app.use(cors({
 const db = require("./models");
 
 // Routers
-const linkRouter = require("./routes/links");
-app.use("/api/v1/links", linkRouter);
+const linksRouter = require("./routes/links");
+app.use("/api/v1/links", linksRouter);
+
+const usersRouter = require('./routes/users');
+app.use('/api/v1/users', usersRouter);
 
 db.sequelize.sync().then(() => {
       app.listen(port, () => {
