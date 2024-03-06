@@ -4,11 +4,11 @@ module.exports = (sequelize, DataTypes) => {
                   type: DataTypes.STRING,
                   allowNul: false,
             },
-            email: {
+            phone: {
                   type: DataTypes.STRING,
                   allowNul: false,
             },
-            phoneNumber: {
+            email: {
                   type: DataTypes.STRING,
                   allowNul: false,
             },
@@ -16,7 +16,10 @@ module.exports = (sequelize, DataTypes) => {
                   type: DataTypes.STRING,
                   allowNul: false,
             },
-      })
+      }, {
+            createdAt: 'created_at',
+            updatedAt: 'updated_at',
+      });
 
       return users;
 }
