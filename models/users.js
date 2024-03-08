@@ -18,11 +18,7 @@ module.exports = (sequelize, DataTypes) => {
                   type: DataTypes.STRING,
                   allowNull: false,
             },
-            type: {
-                  type: DataTypes.ENUM('admin', 'user'),
-                  allowNull: false,
-            },
-            register_for: {
+            role: {
                   type: DataTypes.ENUM(
                         'অ্যাডমিন',
                         'সচিব',
@@ -33,9 +29,6 @@ module.exports = (sequelize, DataTypes) => {
                   ),
                   allowNull: false,
             },
-      }, {
-            createdAt: 'created_at',
-            updatedAt: 'updated_at',
       });
 
       return users;
